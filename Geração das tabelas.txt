@@ -1,0 +1,23 @@
+﻿----------------------------------------------------------------------
+
+CREATE TABLE Marca 
+(
+ MarcaId int IDENTITY (1,1) PRIMARY KEY,
+ MarcaNome varchar(50) UNIQUE NOT NULL,
+)
+
+
+----------------------------------------------------------------------
+
+
+CREATE TABLE Patrimonio
+(
+ PatrimonioId INT IDENTITY (1,1) PRIMARY KEY ,  
+ MarcaId INT FOREIGN KEY REFERENCES Marca(MarcaId) NOT NULL,
+ PatrimonioNome VARCHAR (50) NOT NULL,
+ PatrimonioDescricao text,
+ PatrimonioNumTombo int
+)
+
+
+-----------------------------------------------------------------------
